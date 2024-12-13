@@ -19,4 +19,8 @@ describe('Buttons', () => {
         cy.get('#doubleClickBtn').dblclick();
         cy.get('#doubleClickMessage').should('be.visible');
     });
+    it ('should right click the button', () => {
+        cy.get('#rightClickBtn').rightclcik();
+        cy.contains('You have done a right click').should('be.visible');
+    })
 });
